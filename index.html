@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Менеджер задач</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="app-title">Менеджер задач</h1>
+      <div class="container">
+        <div class="tasks-inner">
+          <div class="task">
+            <div class="task__inner ">
+              <h2 class="task__title task__title--red">Срочные</h2>
+              <ul class="task__list" id="urgentTasks" ondragover="allowDrop(event)" ondrop="drop(event)" ondragenter="dragEnter(0)"></ul>
+              <div class="btn-group">
+                <button class="btn btn-add">+ Добавить задачу</button>
+                <div class="add-container">
+                  <input type="text" class="add-item" placeholder="Введите задачу"></input>
+                  <button class="btn btn-save">Добавить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task">
+            <div class="task__inner ">
+              <h2 class="task__title task__title--blue">План</h2>
+              <ul class="task__list" id="planTasks" ondragover="allowDrop(event)" ondrop="drop(event)" ondragenter="dragEnter(1)"></ul>
+              <div class="btn-group">
+                <button class="btn btn-add">+ Добавить задачу</button>
+                <div class="add-container">
+                  <input type="text" class="add-item" placeholder="Введите задачу" value=""></input>
+                  <button class="btn btn-save">Добавить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task">
+            <div class="task__inner ">
+              <h2 class="task__title task__title--orange">В работе</h2>
+              <ul class="task__list" id="inWorkTasks" ondragover="allowDrop(event)" ondrop="drop(event)" ondragenter="dragEnter(2)"></ul>
+              <div class="btn-group">
+                <button class="btn btn-add">+ Добавить задачу</button>
+                <div class="add-container">
+                  <input type="text" class="add-item" placeholder="Введите задачу"></input>
+                  <button class="btn btn-save">Добавить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task">
+            <div class="task__inner">
+              <h2 class="task__title task__title--green">Выполненные</h2>
+              <ul class="task__list" id="completeTasks" ondragover="allowDrop(event)" ondrop="drop(event)" ondragenter="dragEnter(3)"></ul>
+              <div class="btn-group">
+                <button class="btn btn-add">+ Добавить задачу</button>
+                <div class="add-container">
+                  <input type="text" class="add-item" placeholder="Введите задачу"></input>
+                  <button class="btn btn-save">Добавить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
